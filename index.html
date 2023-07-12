@@ -4,14 +4,22 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, intial-scale=1.0">
         <title>Momentum App</title>
-        <link href="styles.css" rel="stylesheet">
+        <link href="style.css" rel="stylesheet">
     </head>
     <body>
         <div id="clock-wrapper"></div>
         <div id="name-wrapper"></div>
         <div id="focus-wrapper"></div>
         <div id="quote-wrapper"></div>
-        <div id="todo-wrapper"></div>
+        <div id="todo-wrapper">
+            <span id="todo-button">Todo</span>
+            <div id="todo-popup">
+                <div id="todo-input-wrapper">
+                    <input type="text" id="toDoInput" placeholder="Describe To Do..."/>
+                </div>
+                <div id="todo-list-wrapper"></div>
+            </div>
+        </div>
     </body>
     <script src="scripts/todo.js"></script>
 </html>
