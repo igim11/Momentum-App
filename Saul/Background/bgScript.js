@@ -11,6 +11,7 @@
       "https://wallpapercave.com/wp/wp12476843.jpg"
 
     ];
+    
 let preloadedImages = [];
 
 function preloadImages() {
