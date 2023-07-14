@@ -7,6 +7,6 @@
     text-decoration: line-through;
   }
 
-#focus-container {
-    display: none;
-}
+  #focus-container {
+    display: block;
+  }

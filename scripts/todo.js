@@ -1,3 +1,4 @@
+// popup todo list
 const toDoButton = document.getElementById('todo-button');
 const toDoPopup = document.getElementById('todo-popup');
 
@@ -11,6 +12,15 @@ toDoButton.addEventListener('click', function() {
   displayToDos();
 });
 
+// clear all button
+let clearAll = document.getElementById('clear-all');
+
+clearAll.addEventListener('click', function() {
+  toDoItems = [];
+  displayToDos();
+})
+
+// building to do list items
 let toDoItems = JSON.parse(localStorage.getItem('toDoItems')) || [];
 
 function ToDo(description, completed) {
@@ -36,6 +46,23 @@ function buildToDo(toDo, index) {
   checkbox.type = 'checkbox';
   checkbox.id = index;
 
+  let trashBinButton = document.createElement('span');
+  trashBinButton.id = 'trashBinButton';
+  trashBinButton.classList.add('trash-bin');
+
+  let trashBinIcon = document.createElement('i');
+  trashBinIcon.classList.add('fas', 'fa-trash');
+
+  trashBinButton.appendChild(trashBinIcon);
+
+  trashBinButton.addEventListener('click', function() {
+    checkbox.classList.add('completeCheckbox');
+    toDoText.classList.add('completeText');
+    toDo.completed = true;
+    localStorage.setItem('toDoItems', JSON.stringify(toDoItems));
+    displayToDos();
+  })
+
   checkbox.addEventListener('click', function() {
     if (checkbox.checked === true) {
       checkbox.classList.add('completeCheckbox');
@@ -46,11 +73,12 @@ function buildToDo(toDo, index) {
       toDoText.classList.remove('completeText');
       toDo.completed = false;
     }
-
+    
     localStorage.setItem('toDoItems', JSON.stringify(toDoItems));
   });
 
   toDoShell.appendChild(checkbox);
+  toDoShell.appendChild(trashBinButton);
   return toDoShell;
 }
 
