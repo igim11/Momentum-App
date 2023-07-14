@@ -4,14 +4,30 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, intial-scale=1.0">
         <title>Momentum App</title>
-        <link href="styles.css" rel="stylesheet">
+        <link href="style.css" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
     </head>
     <body>
         <div id="clock-wrapper"></div>
         <div id="name-wrapper"></div>
-        <div id="focus-wrapper"></div>
+        <div id="focus-wrapper">
+            <div id="focus-input-wrapper">
+                <p id="focus-header">What is your main focus for today?</p>
+                <input type="text" id="focusInput"/>
+            </div>
+            <div id="focus-container"></div>
+        </div>
         <div id="quote-wrapper"></div>
-        <div id="todo-wrapper"></div>
+        <div id="todo-wrapper">
+            <span id="todo-button">Todo</span>
+            <div id="todo-popup">
+                <div id="todo-input-wrapper">
+                    <input type="text" id="toDoInput" placeholder="Describe To Do..."/>
+                    <button id="clear-all">Clear All</button>
+                </div>
+                <div id="todo-list-wrapper"></div>
+            </div>
+        </div>
     </body>
     <script src="scripts/todo.js"></script>
 </html>
