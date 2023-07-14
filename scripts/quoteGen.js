@@ -10,13 +10,16 @@ let quotes = [
     ' "Bigyan ng jacket!" - Willie Revillame',
     ' "Bakit galit ang beshy ko?" - Unknown',
 
-]
+];
 
 function quoteGen () {
+    console.log('called');
     let randomQuote = Math.floor(Math.random() * (quotes.length));
-    document.getElementById('quoteDisplay').innerHTML = quotes[randomQuote]
+    document.getElementById('quoteDisplay').innerHTML = quotes[randomQuote];
 }
 
 window.onload = function() {
       quoteGen ();
+      preloadImages();
+      changeBackground();
     };

@@ -8,7 +8,14 @@
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
     </head>
     <body>
-        <div id="clock-wrapper"></div>
+        <div id="backgroundGen"></div>
+        <div class="Clock">
+            <button>
+                <div id="clock">
+                    <span id="hours">--</span>:<span id="minutes">--</span>
+                </div>
+            </button>   
+        </div>
         <div id="name-wrapper"></div>
         <div id="focus-wrapper">
             <div id="focus-input-wrapper">
@@ -17,7 +24,7 @@
             </div>
             <div id="focus-container"></div>
         </div>
-        <div id="quote-wrapper"></div>
+        <div id="quoteDisplay"></div>
         <div id="todo-wrapper">
             <span id="todo-button">Todo</span>
             <div id="todo-popup">
@@ -29,6 +36,9 @@
             </div>
         </div>
     </body>
+    <script src="scripts/bgScript.js"></script>
+    <script src="scripts/quoteGen.js" ></script>
     <script src="scripts/todo.js"></script>
     <script src="scripts/focus.js"></script>
+    <script src="scripts/clock.js"></script>
 </html>
