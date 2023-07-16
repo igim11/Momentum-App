@@ -9,6 +9,7 @@ let quotes = [
     ' "Para kanino ka bumabangon?" - Nescafe ',
     ' "Bigyan ng jacket!" - Willie Revillame',
     ' "Bakit galit ang beshy ko?" - Unknown',
+    ' "E = mc²" - Albert Einstein',
 
 ];
 

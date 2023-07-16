@@ -1,3 +1,9 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
 #todo-popup {
     display: none;
 }
@@ -16,22 +22,199 @@ z-index: -1;
 
 body{
     background-color: black;
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: Helvetica, Arial, sans-serif;
     color: white;
-    font-weight: bold;
+    overflow: hidden;
 }
 
-
 .Clock button{
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: Helvetica, Arial, sans-serif;
     background-color: transparent;
     color: white;
-    font-weight: bold;
     position: absolute;
-    top:50%;
+    top:40%;
     left:50%;
     transform:translate(-50%, -50%);
     font-size: 150px;
     border: 0;
     cursor: pointer;
 } 
+
+#focus-wrapper {
+    font-family: Helvetica, Arial, sans-serif;
+    background-color: transparent;
+    color: white;
+    position: absolute;
+    top:80%;
+    left:50%;
+    transform:translate(-50%, -50%);
+    font-size: 1.5vw;
+    border: 0;
+    text-align: center;
+} 
+
+#focusInput {
+    text-align: center;
+    font-size: 3vw;
+    width: 100%;
+    outline: none;
+    color: white;
+    opacity: 1;
+    border: none;
+    border-bottom: 3px solid #dfdfdf;
+    background: none;
+    padding-top: 10px;
+}
+
+#focus-container {
+    text-align: center;
+    font-size: 3vw;
+    width: 100%;
+    min-width: 300px;
+    outline: none;
+    color: white;
+    opacity: 1;
+    background: none;
+    padding-top: 10px;
+}
+
+.focusCheckbox {
+    accent-color: rgba(32, 32, 32, 0.25);
+    opacity: 1;
+    display: none;
+    height: 20px;
+    width: 20px;
+}
+
+.focusShell span {
+    padding-right: 10px;
+}
+
+.focus-trash-bin {
+    padding-left: 10px;
+    font-size: 20px;
+    opacity: 1;
+    cursor: pointer;
+    display: none;
+}
+
+.focus-trash-bin:hover {
+    color: #fdcece;
+}
+
+.hover {
+    opacity: 1;
+    display: inline-block;
+}
+
+#quoteDisplay {
+    font-family: Helvetica, Arial, sans-serif;
+    background-color: transparent;
+    color: white;
+    position: absolute;
+    top:95%;
+    left:50%;
+    transform:translate(-50%, -50%);
+    font-size: 1vw;
+    border: 0;
+    text-align: center;
+}
+
+#todo-button {
+    cursor: pointer;
+}
+
+#todo-button:hover {
+    color: #fdcece;
+}
+
+#todo-wrapper {
+    font-family: Helvetica, Arial, sans-serif;
+    background-color: transparent;
+    color: white;
+    position: absolute;
+    top:98%;
+    left:98%;
+    transform:translate(-50%, -50%);
+    font-size: 1vw;
+    border: 0;
+    text-align: right;
+}
+
+#todo-popup {
+    position: absolute;
+    right: 10px;
+    bottom: 30px;
+    width: 20vw;
+    height: 300px;
+    background: rgba(63, 63, 63, 0.8);
+    border-radius: 4px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+    overflow: auto;
+}
+
+#todo-popup::-webkit-scrollbar {
+    width: 5px;
+}
+
+#todo-popup::-webkit-scrollbar-thumb {
+    background: #959595;
+    border-radius: 25px;
+}
+
+#todo-popup::-webkit-scrollbar-track {
+    background: #d3d3d3;
+    border-radius: 25px;
+}
+
+#todo-input-wrapper {
+    padding: 18px 25px;
+    border-bottom: 1px solid #ccc;
+    display: flex;
+    justify-content: left;
+    align-items: center;
+}
+
+#toDoInput {
+    width: 70%;
+    padding-right: 10px;
+}
+
+#clear-all {
+    color: #fff;
+    cursor: pointer;
+    font-size: 13px;
+    padding: 7px 13px;
+    border-radius: 4px;
+    letter-spacing: 0.3px;
+    background-color: #232337;
+    outline: none;
+}
+
+#clear-all:hover {
+    color: #fdcece;
+}
+
+.toDoShell {
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    border-bottom: 1px solid #ccc;
+}
+
+.todo-trash-bin {
+    padding-left: 10px;
+    font-size: 20px;
+    opacity: 1;
+    cursor: pointer;
+}
+
+.todo-trash-bin:hover {
+    color: #fdcece;
+}
+
+.toDoShell span {
+    padding-left: 10px;
+    padding-right: 10px;
+    font-size: 17px;
+}

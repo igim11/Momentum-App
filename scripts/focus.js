@@ -1,5 +1,22 @@
 let focusItem = JSON.parse(localStorage.getItem('focusItem')) || [];
 
+function displayInput() {
+  let newFocus = document.getElementById('focusInput');
+  let focusHeader = document.getElementById('focus-header');
+  
+  for (let i = 0; i < focusItem.length; i++) {
+    if (focusItem[i].completed === false) {
+      newFocus.style.display = 'none';
+      focusHeader.innerHTML = 'TODAY';
+    } else {
+      newFocus.style.display = 'block';
+      focusHeader.innerHTML = 'What is your main focus for today?';
+    }
+  };
+};
+
+displayInput();
+
 function MainFocus(description, completed) {
   this.description = description;
   this.completed = completed || false;
@@ -22,10 +39,11 @@ function buildFocus(mainFocus, index) {
   let checkbox = document.createElement('input');
   checkbox.type = 'checkbox';
   checkbox.id = index;
+  checkbox.classList.add('focusCheckbox');
 
   let focusTrashBinButton = document.createElement('span');
   focusTrashBinButton.id = 'focusTrashBinButton';
-  focusTrashBinButton.classList.add('trash-bin');
+  focusTrashBinButton.classList.add('focus-trash-bin');
 
   let focusTrashBinIcon = document.createElement('i');
   focusTrashBinIcon.classList.add('fas', 'fa-trash');
@@ -38,8 +56,7 @@ function buildFocus(mainFocus, index) {
     mainFocus.completed = true;
     localStorage.setItem('focusItem', JSON.stringify(focusItem));
     displayFocus();
-    let newFocus = document.getElementById('focusInput');
-    newFocus.style.display = 'block';
+    displayInput();
   })
 
   checkbox.addEventListener('click', function() {
@@ -58,6 +75,17 @@ function buildFocus(mainFocus, index) {
 
   focusShell.appendChild(checkbox);
   focusShell.appendChild(focusTrashBinButton);
+
+  focusShell.addEventListener('mouseenter', function() {
+    focusTrashBinButton.classList.add('hover');
+    checkbox.classList.add('hover');
+  })
+
+  focusShell.addEventListener('mouseleave', function() {
+    focusTrashBinButton.classList.remove('hover');
+    checkbox.classList.remove('hover');
+  })
+
   return focusShell;
 }
 
@@ -88,7 +116,7 @@ addFocus.addEventListener('keydown', function(event) {
     focusItem.push(newFocusItem);
     localStorage.setItem('focusItem', JSON.stringify(focusItem));
     newFocus.value = '';
-    newFocus.style.display = 'none';
+    displayInput();
     displayFocus();
   }
 });

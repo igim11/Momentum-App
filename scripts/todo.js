@@ -45,10 +45,11 @@ function buildToDo(toDo, index) {
   let checkbox = document.createElement('input');
   checkbox.type = 'checkbox';
   checkbox.id = index;
+  checkbox.classList.add('todoCheckbox');
 
   let trashBinButton = document.createElement('span');
   trashBinButton.id = 'trashBinButton';
-  trashBinButton.classList.add('trash-bin');
+  trashBinButton.classList.add('todo-trash-bin');
 
   let trashBinIcon = document.createElement('i');
   trashBinIcon.classList.add('fas', 'fa-trash');
