@@ -17,7 +17,39 @@
                 </div>
             </button>   
         </div>
-        <div id="name-wrapper"></div>
+        <div class="weather-card">
+            <!--
+            <div class="search">
+              <input type="text" placeholder="enter city name" spellcheck="false">
+              <button><img src="images/icons8-search-50.png"></button>
+            </div>
+        -->
+              <div class="weather">
+                <img src="images/icons8-sun-50.png" class="weather-icon">
+                <h1 class="temp">22</h1>
+                <h2 class="city">Manila</h2>
+                <div class="details">
+                  <div class="col">
+                    <img src="images/icons8-pressure-gauge-50.png">
+                    <div>
+                      <p class="humidity"></p>
+                      <p></p>
+                    </div>
+                  </div>
+                  <div class="col">
+                    <img src="images/icons8-wind-50 (1).png">
+                    <div>
+                      <p class="wind"></p>
+                      <p></p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+          </div>
+        <div id="name-con">
+            <label id="name-label" for="name"></label><br>
+            <input type="text" name="name" id="name" placeholder="Hello, what's your name?" required>
+        </div>
         <div id="focus-wrapper">
             <div id="focus-input-wrapper">
                 <p id="focus-header">What is your main focus for today?</p>
@@ -37,9 +69,11 @@
             <span id="todo-button">Todo</span>
         </div>
     </body>
+    <script src="scripts/weather.js"></script>
     <script src="scripts/bgScript.js"></script>
     <script src="scripts/quoteGen.js" ></script>
     <script src="scripts/todo.js"></script>
     <script src="scripts/focus.js"></script>
     <script src="scripts/clock.js"></script>
+    <script src="scripts/greeting.js"></script>
 </html>
