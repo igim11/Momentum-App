@@ -320,9 +320,9 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: 3vw;
+  font-size: 5vw;
   position: absolute;
-  width: 40%;
+  width: 60%;
   height: 100px; 
   left: 50%;
   top: 60%;
@@ -340,7 +340,7 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: 3vw;
+  font-size: 5vw;
   position: absolute;
   width: auto;
   height: 100px; 
