@@ -1,3 +1,8 @@
+@keyframes fadeIn {
+  0% { opacity: 0; }
+  100% { opacity: 1; }
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -38,6 +43,7 @@ body {
   font-size: 150px;
   border: 0;
   cursor: pointer;
+  animation: fadeIn 2s ease-in-out;
 } 
 
 #focus-wrapper {
@@ -51,6 +57,7 @@ body {
   font-size: 1.5vw;
   border: 0;
   text-align: center;
+  animation: fadeIn 2s ease-in-out;
 } 
 
 #focusInput {
@@ -64,6 +71,7 @@ body {
   border-bottom: 3px solid #dfdfdf;
   background: none;
   padding-top: 10px;
+  animation: fadeIn 2s ease-in-out;
 }
 
 #focus-container {
@@ -73,9 +81,10 @@ body {
   min-width: 300px;
   outline: none;
   color: white;
-  opacity: 0.8;
+  opacity: 0.9;
   background: none;
   padding-top: 10px;
+  animation: fadeIn 2s ease-in-out;
 }
 
 .focusCheckbox {
@@ -118,10 +127,12 @@ body {
   font-size: 1vw;
   border: 0;
   text-align: center;
+  animation: fadeIn 2s ease-in-out;
 }
 
 #todo-button {
   cursor: pointer;
+  animation: fadeIn 2s ease-in-out;
 }
 
 #todo-button:hover {
@@ -139,6 +150,7 @@ body {
   font-size: 1vw;
   border: 0;
   text-align: right;
+  animation: fadeIn 2s ease-in-out;
 }
 
 #todo-popup {
@@ -151,6 +163,7 @@ body {
   border-radius: 4px;
   box-shadow: 0 10px 30px rgba(0,0,0,0.1);
   overflow: auto;
+  animation: fadeIn 2s ease-in-out;
 }
 
 #todo-popup::-webkit-scrollbar {
@@ -232,6 +245,7 @@ body {
   top:1%;
   left:95%;
   transform:translate(-50%, -50%);
+  animation: fadeIn 2s ease-in-out;
 }
 
 .search {
@@ -331,9 +345,9 @@ body {
   outline: none;
   border: none;
   color: #fff;
-  opacity: 0.8;
-  border-bottom: 3px solid #dfdfdf;
+  opacity: 1;
   background: none;
+  animation: fadeIn 2s ease-in-out;
 }
 
 #name {
@@ -351,7 +365,7 @@ body {
   outline: none;
   border: none;
   color: #fff;
-  opacity: 0.8;
+  opacity: 1;
   border-bottom: 3px solid #dfdfdf;
   background: none;
 }
@@ -363,3 +377,4 @@ body {
 #name:focus::placeholder {
   color: transparent;
 }
+
